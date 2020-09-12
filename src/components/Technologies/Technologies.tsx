@@ -7,7 +7,7 @@ import data from './technologies.json'
 function Card(props: BoxProps & { image: string, title: string, description: string }){
   return (
       <Box width={props.width} className={"card"}>
-        <img width={props.width} height={props.width} src={props.image}/>
+        <img width={props.width} height={props.width} src={props.image} alt={props.title + ' logo'}/>
         <h2>{props.title}</h2>
         <p>{props.description}</p>
       </Box>

@@ -6,13 +6,13 @@
       {
         "id": 1,
         "name": "C++",
-        "imgUrl": "./images/cpp.svg",
+        "imgUrl": "tech/cpp.png",
         "description": "C++ ist das BESTE!!!!!!\n"
       },
       {
         "id": 2,
         "name": "Java",
-        "imgUrl": "./images/java.svg",
+        "imgUrl": "tech/java.png",
         "description": "Ist halt Java was will man sagen?\n"
       }
     ]
@@ -24,13 +24,13 @@
       {
         "id": 3,
         "name": "JavaScript",
-        "imgUrl": "./images/js.svg",
+        "imgUrl": "tech/js.png",
         "description": "es ist, naja\n"
       },
       {
         "id": 4,
         "name": "Python",
-        "imgUrl": "./images/py.svg",
+        "imgUrl": "tech/py.png",
         "description": "Ist ganz cool so\n"
       }
     ]

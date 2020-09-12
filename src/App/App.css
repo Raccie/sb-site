@@ -9,7 +9,8 @@
 .heading > a {
   max-width: inherit;
 }
-.heading > a > .title {
+
+#title {
   margin-bottom: 1vmax;
   font-size: calc( 50px + (80 - 50) * (100vw - 400px) / (800 - 400) );
   max-width: inherit;
@@ -48,7 +49,7 @@ li {
   border-radius: 5px;
 }
 
-h1 > span {
+.primary {
   color: var(--prim-color);
 }
 

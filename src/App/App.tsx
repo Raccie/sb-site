@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Button } from '@material-ui/core'
 import {
   BrowserRouter as Router,
@@ -11,14 +11,82 @@ import Technologies from "../components/Technologies/Technologies";
 import CV from "../components/CV/CV";
 import Grid from "@material-ui/core/Grid";
 
+function setCookie(cvalue: string, exdays: number) {
+  let d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  let expires = "expires="+ d.toUTCString();
+  document.cookie = cvalue + ";" + expires + ";path=/";
+}
 
 function App() {
+  useEffect(()=>{
+    if(document.cookie === 'anim_played')
+    {
+      // @ts-ignore
+      document.getElementById('firstName').innerText = "Simon";
+      // @ts-ignore
+      document.getElementById('underscore').innerText = "_";
+      // @ts-ignore
+      document.getElementById('lastName').innerText = "Bänsch";
+      setCookie("anim_played", 1/24/60);
+
+    }
+    else {
+
+      let i = 0;
+      let j = 0;
+      let names = ["Simon", "Bänsch"];
+      let title = document.getElementById('title');
+      let titles = [document.getElementById('firstName'), document.getElementById('lastName')]
+      let interval: NodeJS.Timeout;
+      interval = setInterval(() => {
+        if (titles[i] !== null) {
+          // @ts-ignore
+          titles[i].innerText += names[i][j];
+          j++;
+          if (j > names[i].length - 1) {
+            // @ts-ignore
+            document.getElementById('underscore').innerText = '_';
+            i++;
+            j = 0;
+          }
+
+          if (i > names.length - 1) {
+            setCookie("anim_played", 1/24/60);
+            clearInterval(interval);
+          }
+        }
+      }, 100);
+      return () => clearInterval(interval);
+    }
+  });
+
+  useEffect(()=>{
+    const interval = setInterval(() => {
+        let cursor = document.getElementById('cursor');
+
+        if(cursor !== null) {
+          if (cursor.style.visibility === 'hidden')
+            cursor.style.visibility = 'visible';
+          else
+            cursor.style.visibility = 'hidden';
+        }
+
+    }, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
         <div className="heading">
           <a href="/">
-            <h1 className="title">Simon<span>_</span>Bänsch</h1>
+            <h1 id="title">
+              <span id={'firstName'}/>
+              <span id={'underscore'} className="primary"/>
+              <span id={'lastName'}/>
+              <span className="primary" id='cursor'>_</span>
+            </h1>
           </a>
           <ul>
             <li>Web- und Desktop Applikationen</li>
