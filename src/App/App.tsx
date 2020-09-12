@@ -41,7 +41,7 @@ function App() {
             </a>
           </Grid>
           <Grid item md={"auto"} sm={6} xs={12}>
-            <a href={"/technologies"}>
+            <a href={"/technologies#f"}>
               <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Technologien</Button>
             </a>
           </Grid>

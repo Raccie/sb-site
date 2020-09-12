@@ -1,47 +1,53 @@
 import React from 'react';
 import './Technologies.css';
-import {LinearProgress, LinearProgressProps} from "@material-ui/core";
-import Box from "@material-ui/core/Box";
-import Typography from "@material-ui/core/Typography";
-import makeStyles from "@material-ui/core/styles/makeStyles";
+import {Box, BoxProps, Grid} from "@material-ui/core";
 
-const useStyles = makeStyles({
-  root: {
-    width: "100%"
-  },
-  larger: {
-    height: "100px"
-  }
-});
+import data from './technologies.json'
 
-function LinearProgressWithLabel(props: LinearProgressProps & { value: number }) {
-  const classes = useStyles();
-
+function Card(props: BoxProps & { image: string, title: string, description: string }){
   return (
-      <Box display="flex" alignItems="center">
-        <Box className={classes.root} mr={1}>
-          <LinearProgress className={classes.larger} variant="determinate" {...props} />
-        </Box>
-        <Box minWidth={35}>
-          <Typography variant="body2" color="textSecondary">{`${Math.round(
-              props.value,
-          )}%`}</Typography>
-        </Box>
+      <Box width={props.width} className={"card"}>
+        <img width={props.width} height={props.width} src={props.image}/>
+        <h2>{props.title}</h2>
+        <p>{props.description}</p>
       </Box>
-  );
+  )
 }
 
-const Technologies: React.FC = () => {
+const newdata = data.map((data)=>{
+  let title:any;
+  if(data.id == "s1")
+    title = <h2 id={"f"}>{data.title}</h2>
+  else
+    title = <h2>{data.title}</h2>
 
-  let items = [];
-  for(let i = 0; i < 5; i++){
-    items.push(<LinearProgressWithLabel className={"bar"} value={100}/>)
-    items.push(<br/>)
+  let cards = [];
+
+  for(let techno of data.technologies){
+    cards.push(
+        <Grid key={techno.id} item md={6} sm={12} xs={12}>
+          <Card width={350} image={techno.imgUrl}
+                title={techno.name}
+                description={techno.description}/>
+        </Grid>
+    )
   }
 
+  return (
+  <div key={data.id}>
+    {title}
+    <Grid container spacing={4}>
+      {cards}
+    </Grid>
+  </div>
+  )
+
+})
+
+const Technologies: React.FC = () => {
   return(
   <div className="Technologies">
-    {items}
+    {newdata}
   </div>
   )
 };

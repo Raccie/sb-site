@@ -1,0 +1,38 @@
+[
+  {
+    "id": "s1",
+    "title": "favorites",
+    "technologies": [
+      {
+        "id": 1,
+        "name": "C++",
+        "imgUrl": "./images/cpp.svg",
+        "description": "C++ ist das BESTE!!!!!!\n"
+      },
+      {
+        "id": 2,
+        "name": "Java",
+        "imgUrl": "./images/java.svg",
+        "description": "Ist halt Java was will man sagen?\n"
+      }
+    ]
+  },
+  {
+    "id": "s2",
+    "title": "am lernen",
+    "technologies": [
+      {
+        "id": 3,
+        "name": "JavaScript",
+        "imgUrl": "./images/js.svg",
+        "description": "es ist, naja\n"
+      },
+      {
+        "id": 4,
+        "name": "Python",
+        "imgUrl": "./images/py.svg",
+        "description": "Ist ganz cool so\n"
+      }
+    ]
+  }
+]
