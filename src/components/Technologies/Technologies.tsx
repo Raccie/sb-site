@@ -7,7 +7,7 @@ import data from './technologies.json'
 function Card(props: BoxProps & { image: string, title: string, description: string }){
   return (
       <Box width={props.width} className={"card"}>
-        <img width={props.width} height={props.width} src={props.image} alt={props.title + ' logo'}/>
+        <img style={{maxWidth: props.width, maxHeight: props.width}} src={props.image} alt={props.title + ' logo'}/>
         <h2>{props.title}</h2>
         <p>{props.description}</p>
       </Box>
@@ -16,7 +16,7 @@ function Card(props: BoxProps & { image: string, title: string, description: str
 
 const newdata = data.map((data)=>{
   let title:any;
-  if(data.id == "s1")
+  if(data.id === "s1")
     title = <h2 id={"f"}>{data.title}</h2>
   else
     title = <h2>{data.title}</h2>

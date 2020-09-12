@@ -2,6 +2,8 @@
 * {
   --bg-color: #282c35;
   --prim-color: #f50057;
+  --prim-color-dark: #bc094d;
+  --card-color: #00000055;
 }
 
 body {
@@ -12,4 +14,25 @@ body {
 code, body {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+  transition: background-color 200ms;
+  background-color: var(--prim-color-dark);
+
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  transition: background-color 200ms;
+  background-color: var(--prim-color);
 }

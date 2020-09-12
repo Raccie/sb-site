@@ -34,5 +34,17 @@
         "description": "Ist ganz cool so\n"
       }
     ]
+  },
+  {
+    "id": "s3",
+    "title": "hates",
+    "technologies": [
+      {
+        "id": 5,
+        "name": "JavaScript",
+        "imgUrl": "tech/js.png",
+        "description": "es ist, naja\n"
+      }
+    ]
   }
 ]

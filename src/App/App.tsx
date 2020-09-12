@@ -36,7 +36,6 @@ function App() {
       let i = 0;
       let j = 0;
       let names = ["Simon", "Bänsch"];
-      let title = document.getElementById('title');
       let titles = [document.getElementById('firstName'), document.getElementById('lastName')]
       let interval: NodeJS.Timeout;
       interval = setInterval(() => {

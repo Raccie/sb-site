@@ -2,7 +2,7 @@
 
 .card {
     padding: 20px;
-    background-color: #00000055;
+    background-color: var(--card-color);
     border-radius: 5px;
     height: inherit;
     transition: transform 300ms;
