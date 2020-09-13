@@ -87,7 +87,7 @@ function App() {
               <span className="primary" id='cursor'>_</span>
             </h1>
           </a>
-          <ul>
+          <ul className="horizontal-list">
             <li>Web- und Desktop Applikationen</li>
             <li>Server</li>
             <li>Sicherheit</li>
@@ -108,7 +108,7 @@ function App() {
             </a>
           </Grid>
           <Grid item md={"auto"} sm={6} xs={12}>
-            <a href={"/technologies#f"}>
+            <a href={"/technologies"}>
               <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Technologien</Button>
             </a>
           </Grid>

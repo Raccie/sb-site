@@ -1,1 +1,42 @@
-.CV {}
+.CV {
+    text-align: left;
+}
+
+.education {
+    overflow-wrap: revert;
+}
+
+.CV > div > h2 {
+    margin-bottom: 5px;
+}
+
+.listItemLeft {
+    min-width: 113px;
+}
+
+.listItemRight > h4 {
+    color: var(--prim-color-dark);
+    margin: 0 0 0 0;
+}
+
+.listItemRight > h5 {
+    margin: 0 0 0 20px;
+}
+
+.listItemWhole {
+    margin-bottom: 0;
+}
+
+.listItemWhole:last-child > .vertical {
+    min-height: 0;
+}
+
+.vertical {
+    border-left: 6px dashed var(--prim-color);
+    min-height: 70px;
+    margin:  0 10px 0 10px;
+}
+
+ul {
+ margin-top: 0;
+}
