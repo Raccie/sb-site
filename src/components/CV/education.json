@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Informatikmittelschule Aarau",
+    "start": 2018,
+    "end": 2021,
+    "degrees": [
+      "Matura Fachrichtung Wirtschaft",
+      "InformatikerIn EFZ"
+    ]
+  },
+  {
+    "name": "Didac Sprachschule Lausanne",
+    "start": 2017,
+    "end": 2018,
+    "degrees": [
+      "DELF B1",
+      "FCE B2"
+    ]
+  },
+  {
+    "name": "Bezirksschule Zofingen",
+    "start": 2013,
+    "end": 2017,
+    "degrees": []
+  },
+  {
+    "name": "Primarschule Uerkheim",
+    "start": 2008,
+    "end": 2013,
+    "degrees": []
+  }
+]

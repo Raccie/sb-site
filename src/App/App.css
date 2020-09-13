@@ -22,14 +22,12 @@
   max-width: 1000px;
 }
 
-ul {
+.horizontal-list {
   list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
   font-size: calc( 15px + (20 - 15) * (100vw - 400px) / (800 - 400) );
-
-
 }
 
 .buttons > Button,
@@ -43,19 +41,18 @@ a {
   color: white;
 }
 
-li {
+.horizontal-list > li {
   float: left;
   transition: background-color 50ms;
   border-radius: 5px;
 }
 
-.primary {
+.horizontal-list > li + li:before {
+  content: "//";
   color: var(--prim-color);
 }
 
-
-li + li:before {
-  content: "//";
+.primary {
   color: var(--prim-color);
 }
 
