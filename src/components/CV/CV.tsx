@@ -8,16 +8,16 @@ const education = educationData.map((data)=>{
   if(data.degrees.length > 0) {
     degrees.push(<h5>Abschluss:</h5>)
     for (let d of data.degrees) {
-      degrees.push(<h5>&bull; {d}</h5>)
+      degrees.push(<h6>{d}</h6>)
     }
+    degrees.push(<br/>)
   }
   return (
       <div className="inline listItemWhole">
         <div className="listItemLeft">
           {data.start} - {data.end}
         </div>
-        <div className="vertical">
-        </div>
+        <div className="vertical"/>
         <div className="listItemRight">
           <h4 key={data.name}>{data.name}</h4>
           {degrees}
@@ -26,7 +26,7 @@ const education = educationData.map((data)=>{
   )
 })
 
-const Hobbies: React.FC = ()=>{
+/*const Hobbies: React.FC = ()=>{
   return (
     <div>
       <ul>
@@ -36,7 +36,7 @@ const Hobbies: React.FC = ()=>{
       </ul>
     </div>
   )
-}
+}*/
 
 const CV: React.FC = () => {
   return(
@@ -44,10 +44,6 @@ const CV: React.FC = () => {
     <div id="education">
       <h2>Ausbildung</h2>
       {education}
-    </div>
-    <div id="hobbies">
-      <h2>Hobbies</h2>
-      <Hobbies/>
     </div>
   </div>
   )

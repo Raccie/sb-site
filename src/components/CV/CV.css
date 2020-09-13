@@ -12,15 +12,31 @@
 
 .listItemLeft {
     min-width: 113px;
+    border-top: 6px dashed var(--prim-color);
+}
+
+.listItemRight {
+    min-width: 113px;
+    border-top: 6px dashed var(--bg-color);
+}
+
+.listItemLeft > * {
+    margin-right: 10px;
 }
 
 .listItemRight > h4 {
-    color: var(--prim-color-dark);
+    color: var(--prim-color);
     margin: 0 0 0 0;
 }
 
-.listItemRight > h5 {
+.listItemRight > h5,
+.listItemRight > h6{
     margin: 0 0 0 20px;
+}
+
+.listItemRight > h6:before{
+    content: "▰ ";
+    color: var(--prim-color);
 }
 
 .listItemWhole {
@@ -34,9 +50,9 @@
 .vertical {
     border-left: 6px dashed var(--prim-color);
     min-height: 70px;
-    margin:  0 10px 0 10px;
+    margin:  0 10px 0 0;
 }
 
 ul {
- margin-top: 0;
+    margin-top: 0;
 }
