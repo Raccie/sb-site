@@ -15,11 +15,7 @@ function Card(props: BoxProps & { image: string, title: string, description: str
 }
 
 const newdata = data.map((data)=>{
-  let title:any;
-  if(data.id === "s1")
-    title = <h2 id={"f"}>{data.title}</h2>
-  else
-    title = <h2>{data.title}</h2>
+  let title = <h1>{data.title}</h1>
 
   let cards = [];
 
