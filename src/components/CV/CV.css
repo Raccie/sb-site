@@ -12,12 +12,6 @@
 
 .listItemLeft {
     min-width: 113px;
-    border-top: 6px dashed var(--prim-color);
-}
-
-.listItemRight {
-    min-width: 113px;
-    border-top: 6px dashed var(--bg-color);
 }
 
 .listItemLeft > * {
@@ -50,7 +44,7 @@
 .vertical {
     border-left: 6px dashed var(--prim-color);
     min-height: 70px;
-    margin:  0 10px 0 0;
+    margin:  0 10px 0 10px;
 }
 
 ul {

@@ -10,6 +10,8 @@ import Projects from "../components/Projects/Projects";
 import Technologies from "../components/Technologies/Technologies";
 import CV from "../components/CV/CV";
 import Grid from "@material-ui/core/Grid";
+import Component404 from "../components/Component404/Component404";
+import DocumentTitle from 'react-document-title';
 
 function setCookie(cvalue: string, exdays: number) {
   let d = new Date();
@@ -22,13 +24,17 @@ function App() {
   useEffect(()=>{
     if(document.cookie === 'anim_played')
     {
-      // @ts-ignore
-      document.getElementById('firstName').innerText = "Simon";
-      // @ts-ignore
-      document.getElementById('underscore').innerText = "_";
-      // @ts-ignore
-      document.getElementById('lastName').innerText = "Bänsch";
-      setCookie("anim_played", 1/24/60);
+      try {
+        // @ts-ignore
+        document.getElementById('firstName').innerText = "Simon";
+        // @ts-ignore
+        document.getElementById('underscore').innerText = "_";
+        // @ts-ignore
+        document.getElementById('lastName').innerText = "Bänsch";
+        setCookie("anim_played", 1 / 24 / 60);
+      } catch (err){
+
+      }
 
     }
     else {
@@ -77,65 +83,71 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <div className="heading">
-          <a href="/">
-            <h1 id="title">
-              <span id={'firstName'}/>
-              <span id={'underscore'} className="primary"/>
-              <span id={'lastName'}/>
-              <span className="primary" id='cursor'>_</span>
-            </h1>
-          </a>
-          <ul className="horizontal-list">
-            <li>Web- und Desktop Applikationen</li>
-            <li>Server</li>
-            <li>Sicherheit</li>
-          </ul>
-        </div>
+      <DocumentTitle title="Simon Bänsch">
+        <Router>
+          <Switch>
+
+            <Route exact path="/">
+
+              <header className="App-header">
+                <div className="heading">
+                  <a href="/">
+                    <h1 id="title">
+                      <span id={'firstName'}/>
+                      <span id={'underscore'} className="primary"/>
+                      <span id={'lastName'}/>
+                      <span className="primary" id='cursor'>_</span>
+                    </h1>
+                  </a>
+                  <ul className="horizontal-list">
+                    <li>Web- und Desktop Applikationen</li>
+                    <li>Server</li>
+                    <li>Sicherheit</li>
+                  </ul>
+                </div>
 
 
 
-        <Grid container justify={"center"} className={"buttons"} spacing={2}>
-          <Grid item md={"auto"} sm={6} xs={12}>
-            <a href={"https://github.com/Raccie"}>
-              <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">GitHub</Button>
-            </a>
-          </Grid>
-          <Grid item md={"auto"} sm={6} xs={12}>
-            <a href={"/projects"}>
-              <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Projekte</Button>
-            </a>
-          </Grid>
-          <Grid item md={"auto"} sm={6} xs={12}>
-            <a href={"/technologies"}>
-              <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Technologien</Button>
-            </a>
-          </Grid>
-          <Grid item md={"auto"} sm={6} xs={12}>
-            <a href={"/cv"}>
-              <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Lebenslauf</Button>
-            </a>
-          </Grid>
-        </Grid>
-      </header>
+                <Grid container justify={"center"} className={"buttons"} spacing={2}>
+                  <Grid item md={"auto"} sm={6} xs={12}>
+                    <a href={"https://github.com/Raccie"}>
+                      <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">GitHub</Button>
+                    </a>
+                  </Grid>
+                  <Grid item md={"auto"} sm={6} xs={12}>
+                    <a href={"/projects"}>
+                      <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Projekte</Button>
+                    </a>
+                  </Grid>
+                  <Grid item md={"auto"} sm={6} xs={12}>
+                    <a href={"/technologies"}>
+                      <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Technologien</Button>
+                    </a>
+                  </Grid>
+                  <Grid item md={"auto"} sm={6} xs={12}>
+                    <a href={"/cv"}>
+                      <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Lebenslauf</Button>
+                    </a>
+                  </Grid>
+                </Grid>
+              </header>
 
-      <Router>
-        <Switch>
-          <Route path="/projects">
-            <Projects/>
-          </Route>
-          <Route path="/technologies">
-            <Technologies/>
-          </Route>
-          <Route path="/cv">
-            <CV/>
-          </Route>
-          <Route path="/">
 
-          </Route>
-        </Switch>
-      </Router>
+
+              <Route exact path="/projects">
+                <Projects/>
+              </Route>
+              <Route exact path="/technologies">
+                <Technologies/>
+              </Route>
+              <Route exact path="/cv">
+                <CV/>
+              </Route>
+            </Route>
+            <Route exact component={Component404}/>
+          </Switch>
+        </Router>
+      </DocumentTitle>
 
     </div>
   );

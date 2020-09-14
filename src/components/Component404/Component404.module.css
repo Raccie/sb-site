@@ -1,0 +1,25 @@
+.Component404 {
+    position: absolute;
+    left: 2%;
+}
+
+.error {
+    text-align: left;
+    color: var(--prim-color);
+}
+
+.paragraph, .back {
+    text-align: left;
+}
+
+.back {
+    color: var(--prim-color-dark);
+}
+
+.skeleton {
+    transform: rotate(180deg);
+    height: 200%;
+    position: absolute;
+    top: -60%;
+    left: 80%;
+}

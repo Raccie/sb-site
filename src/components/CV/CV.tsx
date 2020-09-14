@@ -15,7 +15,7 @@ const education = educationData.map((data)=>{
   return (
       <div className="inline listItemWhole">
         <div className="listItemLeft">
-          {data.start} - {data.end}
+          {data.start}-{data.end}
         </div>
         <div className="vertical"/>
         <div className="listItemRight">
