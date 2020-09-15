@@ -10,7 +10,7 @@ const Component404: React.FC = () => (
          Hier, lass mich dir helfen<br/>
          <a className={classes.back} href="/">Zur sicheren Seite</a>
       </p>
-      <img className={classes.skeleton} src="skeletons/single_skeleton_dance.gif"/>
+      <img className={classes.skeleton} src="skeletons/single_skeleton_dance.gif" alt="spookey"/>
     </div>
   </DocumentTitle>
 );

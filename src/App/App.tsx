@@ -85,66 +85,58 @@ function App() {
     <div className="App">
       <DocumentTitle title="Simon Bänsch">
         <Router>
-          <Switch>
+            <header className="App-header">
+              <div className="heading">
+                <a href="/">
+                  <h1 id="title">
+                    <span id={'firstName'}/>
+                    <span id={'underscore'} className="primary"/>
+                    <span id={'lastName'}/>
+                    <span className="primary" id='cursor'>_</span>
+                  </h1>
+                </a>
+                <ul className="horizontal-list">
+                  <li>Web- und Desktop Applikationen</li>
+                  <li>Server</li>
+                  <li>Sicherheit</li>
+                </ul>
+              </div>
 
-            <Route exact path="/">
 
-              <header className="App-header">
-                <div className="heading">
-                  <a href="/">
-                    <h1 id="title">
-                      <span id={'firstName'}/>
-                      <span id={'underscore'} className="primary"/>
-                      <span id={'lastName'}/>
-                      <span className="primary" id='cursor'>_</span>
-                    </h1>
+
+              <Grid container justify={"center"} className={"buttons"} spacing={2}>
+                <Grid item md={"auto"} sm={6} xs={12}>
+                  <a href={"https://github.com/Raccie"}>
+                    <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">GitHub</Button>
                   </a>
-                  <ul className="horizontal-list">
-                    <li>Web- und Desktop Applikationen</li>
-                    <li>Server</li>
-                    <li>Sicherheit</li>
-                  </ul>
-                </div>
-
-
-
-                <Grid container justify={"center"} className={"buttons"} spacing={2}>
-                  <Grid item md={"auto"} sm={6} xs={12}>
-                    <a href={"https://github.com/Raccie"}>
-                      <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">GitHub</Button>
-                    </a>
-                  </Grid>
-                  <Grid item md={"auto"} sm={6} xs={12}>
-                    <a href={"/projects"}>
-                      <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Projekte</Button>
-                    </a>
-                  </Grid>
-                  <Grid item md={"auto"} sm={6} xs={12}>
-                    <a href={"/technologies"}>
-                      <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Technologien</Button>
-                    </a>
-                  </Grid>
-                  <Grid item md={"auto"} sm={6} xs={12}>
-                    <a href={"/cv"}>
-                      <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Lebenslauf</Button>
-                    </a>
-                  </Grid>
                 </Grid>
-              </header>
-
-
-
-              <Route exact path="/projects">
-                <Projects/>
-              </Route>
-              <Route exact path="/technologies">
-                <Technologies/>
-              </Route>
-              <Route exact path="/cv">
-                <CV/>
-              </Route>
+                <Grid item md={"auto"} sm={6} xs={12}>
+                  <a href={"/projects"}>
+                    <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Projekte</Button>
+                  </a>
+                </Grid>
+                <Grid item md={"auto"} sm={6} xs={12}>
+                  <a href={"/technologies"}>
+                    <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Technologien</Button>
+                  </a>
+                </Grid>
+                <Grid item md={"auto"} sm={6} xs={12}>
+                  <a href={"/cv"}>
+                    <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Lebenslauf</Button>
+                  </a>
+                </Grid>
+              </Grid>
+            </header>
+          <Switch>
+            <Route exact path="/projects">
+              <Projects/>
             </Route>
-            <Route exact component={Component404}/>
+            <Route exact path="/technologies">
+              <Technologies/>
+            </Route>
+            <Route exact path="/cv">
+              <CV/>
+            </Route>
           </Switch>
         </Router>
       </DocumentTitle>
