@@ -1,6 +1,6 @@
 [
   {
-    "url": "https://www.projects.baensch.dev/",
+    "url": "https://projects.baensch.dev/",
     "imgUrl": "projectIMG/typespeed.png",
     "title": "TypeSpeed",
     "description": "React Web-Applikation welche die Zeit zwischen den Tastenanschlägen misst."
