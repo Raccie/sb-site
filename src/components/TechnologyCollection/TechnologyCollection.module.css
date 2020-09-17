@@ -1,0 +1,22 @@
+.TechnologyCollection {}
+
+.sideImage {
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--card-color);
+}
+
+.paragraph {
+    width: 200px;
+    text-align: left;
+}
+
+.primary {
+    color: var(--prim-color);
+    font-weight: bold;
+}
+
+.grid {
+    min-width: 90vw;
+}

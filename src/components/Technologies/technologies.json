@@ -1,50 +1,26 @@
 [
   {
-    "id": "s1",
-    "title": "favorites",
-    "technologies": [
-      {
-        "id": 1,
-        "name": "C++",
-        "imgUrl": "tech/cpp.png",
-        "description": "C++ ist das BESTE!!!!!!\n"
-      },
-      {
-        "id": 2,
-        "name": "Java",
-        "imgUrl": "tech/java.png",
-        "description": "Ist halt Java was will man sagen?\n"
-      }
-    ]
+    "id": "cpp",
+    "name": "C++",
+    "imgUrl": "tech/cpp.png",
+    "description": "Eine alte Sprache die sich in die modernen einreiht"
   },
   {
-    "id": "s2",
-    "title": "am lernen",
-    "technologies": [
-      {
-        "id": 3,
-        "name": "JavaScript",
-        "imgUrl": "tech/js.png",
-        "description": "es ist, naja\n"
-      },
-      {
-        "id": 4,
-        "name": "Python",
-        "imgUrl": "tech/py.png",
-        "description": "Ist ganz cool so\n"
-      }
-    ]
+    "id": "java",
+    "name": "Java",
+    "imgUrl": "tech/java.png",
+    "description": "Sprache mit einer mächtigen Plattform"
   },
   {
-    "id": "s3",
-    "title": "hates",
-    "technologies": [
-      {
-        "id": 5,
-        "name": "JavaScript",
-        "imgUrl": "tech/js.png",
-        "description": "es ist, naja\n"
-      }
-    ]
+    "id": "js",
+    "imgUrl": "tech/js.png",
+    "name": "JavaScript",
+    "description": "Sprache des Internets und noch viel mehr"
+  },
+  {
+    "id": "python",
+    "name": "Python",
+    "imgUrl": "tech/py.png",
+    "description": "Starke Skriptsprache alle Zwecke"
   }
 ]

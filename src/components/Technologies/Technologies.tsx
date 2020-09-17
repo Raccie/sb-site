@@ -2,7 +2,10 @@ import React from 'react';
 import './Technologies.css';
 import {Box, BoxProps, Grid} from "@material-ui/core";
 
-import data from './technologies.json'
+import technologies from './technologies.json'
+import section from './sections.json'
+import {Link} from "react-router-dom";
+import {articles} from "../TechnologyCollection/TechnologyCollection";
 
 function Card(props: BoxProps & { image: string, title: string, description: string }){
   return (
@@ -14,7 +17,7 @@ function Card(props: BoxProps & { image: string, title: string, description: str
   )
 }
 
-const newdata = data.map((data)=>{
+const newdata = section.map((data)=>{
   let title:any;
   if(data.id === "s1")
     title = <h2 id={"f"}>{data.title}</h2>
@@ -23,14 +26,29 @@ const newdata = data.map((data)=>{
 
   let cards = [];
 
-  for(let techno of data.technologies){
-    cards.push(
-        <Grid key={techno.id} item md={6} sm={12} xs={12}>
-          <Card width={350} image={techno.imgUrl}
-                title={techno.name}
-                description={techno.description}/>
-        </Grid>
-    )
+  for(let id of data.technologies){
+    const techno = technologies.find((technology)=>technology.id === id);
+    if(techno !== undefined) {
+      if(articles.get(techno.id) !== undefined)
+        cards.push(
+          <Grid key={techno.id} item md={6} sm={12} xs={12}>
+            <Link to={`technologies/${techno.id}`}>
+              <Card width={350} image={techno.imgUrl}
+                    title={techno.name}
+                    description={techno.description}/>
+            </Link>
+          </Grid>
+        )
+      else{
+        cards.push(
+          <Grid key={techno.id} item md={6} sm={12} xs={12}>
+            <Card width={350} image={techno.imgUrl}
+                  title={techno.name}
+                  description={techno.description}/>
+          </Grid>
+        )
+      }
+    }
   }
 
   return (
@@ -44,7 +62,7 @@ const newdata = data.map((data)=>{
 
 })
 
-const Technologies: React.FC = () => {
+function Technologies() {
   return(
   <div className="Technologies">
     {newdata}

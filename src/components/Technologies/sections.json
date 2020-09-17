@@ -1,0 +1,12 @@
+[
+  {
+    "id": "s1",
+    "title": "favorites",
+    "technologies": ["cpp", "java"]
+  },
+  {
+    "id": "s2",
+    "title": "am lernen",
+    "technologies": ["python", "js"]
+  }
+]

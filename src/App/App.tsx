@@ -3,13 +3,14 @@ import { Button } from '@material-ui/core'
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
+  Route, Link,
 } from "react-router-dom";
 import './App.css';
 import Projects from "../components/Projects/Projects";
 import Technologies from "../components/Technologies/Technologies";
 import CV from "../components/CV/CV";
 import Grid from "@material-ui/core/Grid";
+import Technology from "../components/Technology/Technology";
 
 function setCookie(cvalue: string, exdays: number) {
   let d = new Date();
@@ -108,19 +109,19 @@ function App() {
               </a>
             </Grid>
             <Grid item md={"auto"} sm={6} xs={12}>
-              <a href={"/projects"}>
+              <Link to="/projects">
                 <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Projekte</Button>
-              </a>
+              </Link>
             </Grid>
             <Grid item md={"auto"} sm={6} xs={12}>
-              <a href={"/technologies"}>
+              <Link to="/technologies">
                 <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Technologien</Button>
-              </a>
+              </Link>
             </Grid>
             <Grid item md={"auto"} sm={6} xs={12}>
-              <a href={"/cv"}>
+              <Link to="/cv">
                 <Button size={"large"} fullWidth={true} variant={"outlined"} color="secondary">Lebenslauf</Button>
-              </a>
+              </Link>
             </Grid>
           </Grid>
         </header>
@@ -128,9 +129,8 @@ function App() {
           <Route exact path="/projects">
             <Projects/>
           </Route>
-          <Route exact path="/technologies">
-            <Technologies/>
-          </Route>
+          <Route exact path="/technologies" component={Technologies}/>
+          <Route exact path="/technologies/:techId" component={Technology}/>
           <Route exact path="/cv">
             <CV/>
           </Route>
