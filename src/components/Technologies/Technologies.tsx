@@ -1,21 +1,11 @@
 import React from 'react';
 import './Technologies.css';
-import {Box, BoxProps, Grid} from "@material-ui/core";
-
+import {createMuiTheme, Grid} from "@material-ui/core";
 import technologies from './technologies.json'
 import section from './sections.json'
 import {Link} from "react-router-dom";
 import {articles} from "../TechnologyCollection/TechnologyCollection";
-
-function Card(props: BoxProps & { image: string, title: string, description: string }){
-  return (
-      <Box width={props.width} className={"card"}>
-        <img style={{maxWidth: props.width, maxHeight: props.width}} src={props.image} alt={props.title + ' logo'}/>
-        <h2>{props.title}</h2>
-        <p>{props.description}</p>
-      </Box>
-  )
-}
+import {Card} from "../ImageCard/ImageCard";
 
 const newdata = section.map((data)=>{
   let title:any;
@@ -28,10 +18,12 @@ const newdata = section.map((data)=>{
 
   for(let id of data.technologies){
     const techno = technologies.find((technology)=>technology.id === id);
+
+    //if technology is not found in the articles, don't create a link
     if(techno !== undefined) {
       if(articles.get(techno.id) !== undefined)
         cards.push(
-          <Grid key={techno.id} item md={6} sm={12} xs={12}>
+          <Grid key={techno.id} item md={6} sm={6} xs={12}>
             <Link to={`technologies/${techno.id}`}>
               <Card width={350} image={techno.imgUrl}
                     title={techno.name}
@@ -41,7 +33,7 @@ const newdata = section.map((data)=>{
         )
       else{
         cards.push(
-          <Grid key={techno.id} item md={6} sm={12} xs={12}>
+          <Grid key={techno.id} item md={6} sm={6} xs={12}>
             <Card width={350} image={techno.imgUrl}
                   title={techno.name}
                   description={techno.description}/>
@@ -68,6 +60,6 @@ function Technologies() {
     {newdata}
   </div>
   )
-};
+}
 
 export default Technologies;

@@ -1,5 +1,8 @@
-.Projects {}
+.Projects {
+    margin-left: 0;
+}
 
 .root {
-    min-width: 275px;
+    /*min-width: 275px;*/
+    margin-left: 0;
 }

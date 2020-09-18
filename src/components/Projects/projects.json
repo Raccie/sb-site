@@ -1,9 +1,15 @@
 [
   {
-    "url": "https://projects.baensch.dev/",
+    "url": "https://projects.baensch.dev/typespeed",
     "imgUrl": "projectIMG/typespeed.png",
     "title": "TypeSpeed",
-    "description": "React Web-Applikation welche die Zeit zwischen den Tastenanschlägen misst."
+    "description": "React Web-Applikation welche die Zeit zwischen den Tastenanschlägen misst"
+  },
+  {
+    "url": "https://projects.baensch.dev/halog",
+    "imgUrl": "projectIMG/halog.png",
+    "title": "HA-Log Writer",
+    "description": "Vue Applikation zum einfachen Erstellen von Hausaufgabenlogs an der BBBaden"
   }
 
 ]
