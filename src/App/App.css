@@ -12,12 +12,12 @@
 
 #title {
   margin-bottom: 1vmax;
-  font-size: calc( 50px + (80 - 50) * (100vw - 400px) / (800 - 400) );
+  font-size: calc( 50px + (70 - 50) * (100vw - 400px) / (800 - 400) );
   max-width: inherit;
 }
 
 .heading {
-  margin-left: 30px;
+  margin: 0 auto;
   margin-bottom: 2vh;
   max-width: 1000px;
 }
@@ -27,7 +27,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-size: calc( 15px + (20 - 15) * (100vw - 400px) / (800 - 400) );
+  font-size: calc( 15px + (19 - 15) * (100vw - 400px) / (800 - 400) );
 }
 
 .buttons > Button,
