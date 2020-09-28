@@ -1,6 +1,6 @@
 import React from 'react';
 import './Technologies.css';
-import {createMuiTheme, Grid} from "@material-ui/core";
+import {Grid} from "@material-ui/core";
 import technologies from './technologies.json'
 import section from './sections.json'
 import {Link} from "react-router-dom";
@@ -46,7 +46,7 @@ const newdata = section.map((data)=>{
   return (
   <div key={data.id}>
     {title}
-    <Grid container spacing={4}>
+    <Grid className="cards" container alignItems="stretch" spacing={4}>
       {cards}
     </Grid>
   </div>

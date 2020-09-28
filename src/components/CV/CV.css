@@ -50,3 +50,8 @@
 ul {
     margin-top: 0;
 }
+
+
+.inline {
+    display: flex;
+}

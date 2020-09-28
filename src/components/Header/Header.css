@@ -1,0 +1,65 @@
+.buttons {
+
+}
+
+.heading > a {
+    max-width: inherit;
+}
+
+#title {
+    margin-bottom: 1vmax;
+    font-size: calc( 55px + (90 - 55) * (100vw - 500px) / (1200 - 500) );
+    max-width: inherit;
+}
+
+.heading {
+    margin: 0 auto 2vh auto;
+    max-width: 1000px;
+}
+
+.horizontal-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-size: calc( 15px + (19 - 15) * (100vw - 400px) / (800 - 400) );
+}
+
+.buttons > Button,
+.buttons > * > Button {
+    margin: 0 5px 0 5px;
+    font-size: 1em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.horizontal-list > li {
+    float: left;
+    transition: background-color 50ms;
+    border-radius: 5px;
+}
+
+.horizontal-list > li + li:before {
+    content: "//";
+    color: var(--prim-color);
+}
+
+.primary {
+    color: var(--prim-color);
+}
+
+.App,
+.App-header {
+    background-color: var(--bg-color);
+    min-height: 40vh;
+    margin-bottom: 2vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: normal;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}

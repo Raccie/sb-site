@@ -1,0 +1,5 @@
+[
+  {"key": "React", "bg": "#00d8ff", "color": "#333"},
+  {"key": "TypeScript", "bg": "#007acd", "color": "white"},
+  {"key": "Vue.js", "bg": "#41b883", "color":  "white"}
+]

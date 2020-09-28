@@ -6,11 +6,11 @@ import educationData from './education.json'
 const education = educationData.map((data)=>{
   let degrees = [];
   if(data.degrees.length > 0) {
-    degrees.push(<h5>Abschluss:</h5>)
+    degrees.push(<h5 key={`${data.name}${data.start}${data.end}`}>Abschluss:</h5>)
     for (let d of data.degrees) {
-      degrees.push(<h6>{d}</h6>)
+      degrees.push(<h6 key={`${data.name}${data.start}${data.end}`}>{d}</h6>)
     }
-    degrees.push(<br/>)
+    degrees.push(<br key={`${data.name}${data.start}${data.end}`}/>)
   }
   return (
       <div className="inline listItemWhole">

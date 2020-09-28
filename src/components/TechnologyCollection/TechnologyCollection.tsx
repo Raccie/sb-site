@@ -11,12 +11,12 @@ function cpp(){
     return(
         <Grid className={classes.grid} container spacing={8}>
           <Grid item md={3} sm={3} xs={12}>
-            <img className={classes.sideImage} src={`../${cpp.imgUrl}`}/>
+            <img className={classes.sideImage} src={`../${cpp.imgUrl}`} alt="c++ logo"/>
           </Grid>
           <Grid className={classes.paragraph} item md={9} sm={9} xs={12}>
-            <span className={classes.primary}>C++</span> ist eine weiterentwicklung der Programmiersprache <Link className={classes.primary} to="c">C</Link>, welche 1985 zum ersten Mal
+            <span className={classes.primary}>C++</span> ist eine weiterentwicklung der Programmiersprache <span className={classes.primary}>C</span>, welche 1985 zum ersten Mal
             aufgetaucht ist. Seitdem wir die Sprache für alles gebraucht das performanter sein soll als eine abstraktere Sprache
-            und zu komplex für <Link className={classes.primary} to="c">C</Link> oder gar Assembly ist.
+            und zu komplex für <span className={classes.primary}>C</span> oder gar Assembly ist.
             <br/><br/>
             Trotz der Tatsache, dass die Sprache bereits über 35 Jahre alt ist, hält sie sich extrem relevant.
             Die Standard Library wird alle paar Jahre erweitert oder angepasst. Die meisten Spiele die seit den 90ern
@@ -37,7 +37,7 @@ function java(){
         <div>
           <Grid className={classes.grid} container spacing={8}>
             <Grid item md={3} sm={3} xs={12}>
-              <img className={classes.sideImage} src={`../${java.imgUrl}`}/>
+              <img className={classes.sideImage} src={`../${java.imgUrl}`} alt="java logo"/>
             </Grid>
             <Grid className={classes.paragraph} item md={9} sm={9} xs={12}>
               <span className={classes.primary}>Java</span> ist eine der wohl weitest verbreiteten Programmiersprachen. Die grösste Stärke von Java gegenüber anderen
@@ -65,7 +65,7 @@ function js(){
         <div>
           <Grid className={classes.grid} container spacing={8}>
             <Grid item md={3} sm={3} xs={12}>
-              <img className={classes.sideImage} src={`../${js.imgUrl}`}/>
+              <img className={classes.sideImage} src={`../${js.imgUrl}`} alt="javascript logo"/>
             </Grid>
             <Grid className={classes.paragraph} item md={9} sm={9} xs={12}>
               <span className={classes.primary}>JavaScript</span>, die Programmiersprache des Internets. Durch Runtimes
@@ -76,7 +76,7 @@ function js(){
               Sprache die (fast) alle Webbrowser ausführen können.
             </Grid>
             <Grid item md={3} sm={3} xs={12}>
-              <img className={classes.sideImage} src={`../tech/ts.png`}/>
+              <img className={classes.sideImage} src={`../tech/ts.png`} alt="typescript logo"/>
             </Grid>
             <Grid className={classes.paragraph} item md={9} sm={9} xs={12}>
               <span className={classes.primary}>TypeScript</span> löst das eine Problem, das vor allem Programmierer
